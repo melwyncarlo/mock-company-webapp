@@ -23,6 +23,8 @@ pipeline
                 sh '. ~/.profile'
                 sh '. ~/.bashrc'
                 sh 'node -v'
+                
+                npm install --global yarn
             }
         }
         stage('Assemble/Build')
