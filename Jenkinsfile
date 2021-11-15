@@ -8,6 +8,7 @@ pipeline
             steps
             {
                 echo "\n\n Downloading and installing Node Version Manager ...\n\n"
+                sh 'rm -rf ${HOME}/.nvm'
                 sh 'wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh'
                 sh 'sudo chmod +x ${PWD}/install.sh'
                 sh '${PWD}/install.sh'
