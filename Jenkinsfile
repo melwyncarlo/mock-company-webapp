@@ -20,7 +20,6 @@ pipeline
                 sh 'sudo ${HOME}/.nvm/nvm.sh'
                 echo "\n\n ... Done!\n\n"
                 
-                sh '. ~/.nvm/nvm.sh'
                 sh '. ~/.profile'
                 sh '. ~/.bashrc'
                 sh 'node -v'
