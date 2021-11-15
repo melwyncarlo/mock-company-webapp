@@ -7,13 +7,7 @@ pipeline
         {
             steps
             {
-                sh -c 'wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh'
-                sh -c './install.sh'
-                sh -c 'echo -e "\n\n ... Done!\n\n"'
-                
-                sh -c 'echo -e "\n\n Installing and using LTS NodeJS ...\n\n"'
-                sh -c 'nvm install --lts'
-                sh -c 'nvm use --lts'
+                sh -c 'echo -e "\n\n Downloading and installing Node Version Manager ...\n\n"'
                 sh -c 'echo -e "\n\n ... Done!\n\n"'
             }
         }
