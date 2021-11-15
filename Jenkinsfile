@@ -3,7 +3,7 @@ pipeline {
     stages {        
         stage('Assemble/Build') {
             steps {
-                sh -c 'echo "\n\n Assembling/building the Mock Company webapp ...\n\n"'
+                sh 'echo -e "\n\n Assembling/building the Mock Company webapp ...\n\n"'
                 sh -c './gradlew assemble'
                 sh -c 'echo -e "\n\n ... Done!\n\n"'
             }
