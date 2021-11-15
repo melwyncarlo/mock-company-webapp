@@ -16,8 +16,8 @@ pipeline
                 
                 echo "\n\n Installing and using LTS NodeJS ...\n\n"
                 sh 'chmod +x ${HOME}/.nvm/nvm.sh'
-                sh '${HOME}/.nvm/nvm.sh install --lts'
-                sh '${HOME}/.nvm/nvm.sh use --lts'
+                sh '${HOME}/.nvm/nvm.sh install --lts & wait $!'
+                sh '${HOME}/.nvm/nvm.sh use --lts & wait $!'
                 echo "\n\n ... Done!\n\n"
             }
         }
