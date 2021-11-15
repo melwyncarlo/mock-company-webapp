@@ -30,7 +30,7 @@ pipeline
         {
             steps
             {
-                sh -c 'echo -e "\n\n Testing the Mock Company webapp ...\n\n"'
+                sh -c 'echo -e "\n\n Groovy testing the Mock Company webapp ...\n\n"'
                 sh -c './gradlew test'
                 sh -c 'echo -e "\n\n ... Done!\n\n"'
             }
