@@ -69,6 +69,6 @@ public class SearchService {
             }
         }
         // Return results
-        return Collections.emptyList();
+        return itemList;
     }
 }
