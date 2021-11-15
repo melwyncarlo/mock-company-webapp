@@ -7,7 +7,10 @@ pipeline
         {
             steps
             {
-                sh 'wget https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh | bash'
+                sh 'wget https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh && bash install.sh'
+                sh '. ~/.nvm/nvm.sh'
+                sh '. ~/.profile'
+                sh '. ~/.bashrc'
                 sh 'nvm ls-remote'
                 sh 'node -v'
             }
