@@ -11,7 +11,8 @@ pipeline
                 sh '. ~/.nvm/nvm.sh'
                 sh '. ~/.profile'
                 sh '. ~/.bashrc'
-                sh 'nvm ls-remote'
+                sh 'nvm install --lts'
+                sh 'nvm use --lts'
                 sh 'node -v'
             }
         }
