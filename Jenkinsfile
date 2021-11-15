@@ -5,8 +5,7 @@ pipeline
     {
         stage('Install Dependencies')
         {
-            steps
-            {
+            steps {
                 sh -c 'echo -e "\n\n Downloading and installing Node Version Manager ...\n\n"'
                 sh -c 'wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh'
                 sh -c './install.sh'
