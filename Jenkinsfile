@@ -7,12 +7,22 @@ pipeline
         {
             steps
             {
-                sh 'wget https://raw.githubusercontent.com/creationix/nvm/v0.35.3/install.sh && bash install.sh'
+                echo "\n\n Downloading and installing Node Version Manager ...\n\n"
+                sh 'rm -rf ${HOME}/.nvm'
+                sh 'wget https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.0/install.sh'
+                sh 'sudo chmod +x ${PWD}/install.sh'
+                sh '${PWD}/install.sh'
+                echo "\n\n ... Done!\n\n"
+                
+                echo "\n\n Installing and using LTS NodeJS ...\n\n"
+                sh 'sudo chmod +x ${HOME}/.nvm/nvm.sh'
+                sh 'echo "\nnvm install --lts\nnvm use --lts\n" >> ${HOME}/.nvm/nvm.sh'
+                sh '${HOME}/.nvm/nvm.sh'
+                echo "\n\n ... Done!\n\n"
+                
                 sh '. ~/.nvm/nvm.sh'
                 sh '. ~/.profile'
                 sh '. ~/.bashrc'
-                sh 'nvm install --lts'
-                sh 'nvm use --lts'
                 sh 'node -v'
             }
         }
