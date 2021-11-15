@@ -14,8 +14,8 @@ pipeline
                 echo "\n\n ... Done!\n\n"
                 
                 echo "\n\n Installing and using LTS NodeJS ...\n\n"
-                sh '$NVM_DIR/nvm.sh install --lts'
-                sh '$NVM_DIR/nvm.sh use --lts'
+                sh '${HOME}/.nvm/nvm.sh install --lts'
+                sh '${HOME}/.nvm/nvm.sh use --lts'
                 echo "\n\n ... Done!\n\n"
             }
         }
