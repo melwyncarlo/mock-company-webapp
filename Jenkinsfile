@@ -22,15 +22,17 @@ pipeline
                 
                 echo "\n\n Installing and using LTS NodeJS ...\n\n"
                 sh 'sudo chmod +x ${HOME}/.nvm/nvm.sh'
-                sh 'echo "\nnvm install --lts\nnvm use --lts\n" >> ${HOME}/.nvm/nvm.sh'
                 sh 'sudo ${HOME}/.nvm/nvm.sh'
-                echo "\n\n ... Done!\n\n"
-                
                 sh '. ~/.profile'
                 sh '. ~/.bashrc'
+                sh 'nvm install --lts'
+                sh 'nvm use --lts'
                 sh 'node -v'
+                echo "\n\n ... Done!\n\n"
                 
+                echo "\n\n Installing and using LTS NodeJS ...\n\n"
                 sh 'sudo npm install --global yarn'
+                echo "\n\n ... Done!\n\n"
             }
         }
         stage('Assemble/Build')
