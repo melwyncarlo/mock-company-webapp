@@ -3,14 +3,7 @@ pipeline
     agent any
     stages
     {
-        stage('Install Dependencies')
-        {
-            steps
-            {
-                sh -c 'echo -e "\n\n Downloading and installing Node Version Manager ...\n\n"'
-                sh -c 'echo -e "\n\n ... Done!\n\n"'
-            }
-        }
+        
         stage('Assemble/Build')
         {
             steps
