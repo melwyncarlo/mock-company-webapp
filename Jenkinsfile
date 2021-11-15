@@ -24,7 +24,7 @@ pipeline
                 sh '. ~/.bashrc'
                 sh 'node -v'
                 
-                npm install --global yarn
+                sh 'npm install --global yarn'
             }
         }
         stage('Assemble/Build')
