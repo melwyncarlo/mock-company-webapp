@@ -31,6 +31,7 @@ pipeline
                 echo "\n\n ... Done!\n\n"
             }
         }
+        
         stage('Assemble/Build')
         {
             steps
@@ -40,6 +41,7 @@ pipeline
                 echo "\n\n ... Done!\n\n"
             }
         }
+        
         stage('Test')
         {
             steps
